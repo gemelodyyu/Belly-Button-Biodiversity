@@ -58,36 +58,6 @@ d3.json("data/samples.json").then((importData) => {
 		}
 		// plot to the div tag with id "bar"
 		Plotly.newPlot("bar", barData, barLayout);
-
-		// BUBBLE CHART
-		var trace2 = {
-			x: top10Ids,
-			y: top10Values,
-			mode: 'markers',
-			marker: {
-				size: top10Values,
-				color: top10Ids
-			},
-			text: top10Labels
-		};
-		
-		var bubbleData = [trace2];
-		
-		var bubbleLayout = {
-			xaxis: {title: "OTU ID"},
-			showlegend: false
-		};
-		
-		Plotly.newPlot('bubble', bubbleData, bubbleLayout);
-
-		// DEMOGRAPHIC INFO
-		var metainfo = data.metadata.filter(sample => sample.id == inputValue)[0];
-
-		// Clear current contents 
-		d3.select("#sample-metadata").html("");
-		
-		// Display each key-value pair from the metadata JSON object
-		Object.entries(metainfo).forEach(([key, value]) => d3.select("#sample-metadata").append("p").text(`${key}: ${value}`));
 	}
 	init();
 }); 
