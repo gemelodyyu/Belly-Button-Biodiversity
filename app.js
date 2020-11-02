@@ -54,7 +54,8 @@ d3.json("data/samples.json").then((importData) => {
 
 		var barLayout = {
 			xaxis: {title: "Sample Value"},
-			autosize: false
+			height: 500,
+			width: 500
 		}
 		// plot to the div tag with id "bar"
 		Plotly.newPlot("bar", barData, barLayout);
@@ -66,7 +67,8 @@ d3.json("data/samples.json").then((importData) => {
 			mode: 'markers',
 			marker: {
 				size: allSampleValues,
-				color: allOtuIds
+				color: allOtuIds,
+				colorscale: "Portland"
 			},
 			text: allOtuLabels
 		};
