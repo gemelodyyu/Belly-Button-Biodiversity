@@ -28,7 +28,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 6. Update all of the plots any time that a new sample is selected.
 
 
-* Deploy your app to a free static page hosting service, such as GitHub Pages. 
+7. Deploy your app to a free static page hosting service, such as GitHub Pages. 
 
 
 ## Link
