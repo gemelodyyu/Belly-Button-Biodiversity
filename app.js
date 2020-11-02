@@ -61,14 +61,14 @@ d3.json("data/samples.json").then((importData) => {
 
 		// bubble chart 
 		var trace2 = {
-			x: top10Ids,
-			y: top10Values,
+			x: allOtuIds,
+			y: allSampleValues,
 			mode: 'markers',
 			marker: {
-				size: top10Values,
-				color: top10Ids
+				size: allSampleValues,
+				color: allOtuIds
 			},
-			text: top10Labels
+			text: allOtuLabels
 		};
 		
 		var bubbleData = [trace2];
